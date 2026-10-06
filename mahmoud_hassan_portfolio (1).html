@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>م. محمود حسن | مهندس استشاري وخبير إدارة مشاريع</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Cairo for Arabic typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E293B',
+                        accent: '#0284C7',
+                        accentHover: '#0369A1',
+                        surface: '#F8FAFC',
+                        cardBg: '#FFFFFF',
+                        textDark: '#334155'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #F8FAFC;
+            color: #334155;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+    </style>
+</head>
+<body class="bg-surface text-textDark antialiased selection:bg-accent selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-md shadow-md text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo / Brand -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-accent flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-hard-hat"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight block">م. محمود حسن</span>
+                    <span class="text-xs text-sky-300 font-medium tracking-wide">خبرة 10 سنوات هندسية</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm lg:text-base">
+                <a href="#home" class="hover:text-accent transition-colors">الرئيسية</a>
+                <a href="#about" class="hover:text-accent transition-colors">من أنا</a>
+                <a href="#experience" class="hover:text-accent transition-colors">الخبرات</a>
+                <a href="#projects" class="hover:text-accent transition-colors">المشاريع</a>
+                <a href="#contact" class="hover:text-accent transition-colors">تواصل معي</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-accent hover:bg-accentHover text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>استشارة هندسية</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" aria-label="فتح القائمة" class="md:hidden text-white text-2xl focus:outline-none p-2 rounded-lg hover:bg-white/10 transition-colors">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-slate-700/60 px-6 py-5 shadow-xl transition-all">
+            <nav class="flex flex-col gap-4 text-base font-medium">
+                <a href="#home" class="mobile-link hover:text-accent transition-colors py-1 flex items-center gap-3">
+                    <i class="fa-solid fa-house w-6 text-accent"></i> الرئيسية
+                </a>
+                <a href="#about" class="mobile-link hover:text-accent transition-colors py-1 flex items-center gap-3">
+                    <i class="fa-solid fa-user-tie w-6 text-accent"></i> من أنا
+                </a>
+                <a href="#experience" class="mobile-link hover:text-accent transition-colors py-1 flex items-center gap-3">
+                    <i class="fa-solid fa-briefcase w-6 text-accent"></i> الخبرات والمهارات
+                </a>
+                <a href="#projects" class="mobile-link hover:text-accent transition-colors py-1 flex items-center gap-3">
+                    <i class="fa-solid fa-diagram-project w-6 text-accent"></i> المشاريع الكبرى
+                </a>
+                <a href="#contact" class="mobile-link hover:text-accent transition-colors py-1 flex items-center gap-3">
+                    <i class="fa-solid fa-envelope w-6 text-accent"></i> تواصل معي
+                </a>
+                <div class="pt-3 border-t border-slate-700">
+                    <a href="#contact" class="mobile-link block text-center bg-accent text-white py-3 rounded-xl font-semibold shadow">
+                        طلب استشارة هندسية
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-primary via-[#1e293b] to-[#0f172a] text-white py-20 lg:py-32">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-10 right-10 w-96 h-96 rounded-full bg-accent blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-sky-500 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Right Side: Text & CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-sky-300 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-medal text-accent"></i>
+                        <span>أكثر من 10 سنوات من التميز الهندسي</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        مهندس <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-accent">محمود حسن</span>
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-semibold text-sky-200">
+                        مهندس استشاري وخبير في إدارة المشاريع والتصميم الإنشائي
+                    </p>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        مهندس محترف بخبرة عقد كامل في قيادة المشاريع الكبرى، الإشراف الميداني الدقيق، وتطوير الحلول الهندسية المبتكرة التي تضمن أعلى معايير الجودة والسلامة والكفاءة الزمنية والمادية.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-accent hover:bg-accentHover text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-accent/40 transition-all duration-300 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-solid fa-comments"></i>
+                            <span>تواصل معي مباشرة</span>
+                        </a>
+                        <a href="#projects" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 font-bold px-8 py-4 rounded-xl shadow transition-all duration-300 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>استعرض مشاريعي</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-700/80 mt-8">
+                        <div class="text-center lg:text-right">
+                            <span class="block text-3xl font-black text-sky-400">+10</span>
+                            <span class="text-xs sm:text-sm text-slate-400 font-medium">سنوات خبرة</span>
+                        </div>
+                        <div class="text-center lg:text-right">
+                            <span class="block text-3xl font-black text-sky-400">+25</span>
+                            <span class="text-xs sm:text-sm text-slate-400 font-medium">مشروع منجز</span>
+                        </div>
+                        <div class="text-center lg:text-right">
+                            <span class="block text-3xl font-black text-sky-400">100%</span>
+                            <span class="text-xs sm:text-sm text-slate-400 font-medium">جودة والتزام</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Side: Profile Image Container -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                        <!-- Decorative Border / Ring -->
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent to-sky-400 rotate-6 opacity-60 blur-sm"></div>
+                        <div class="absolute inset-0 rounded-3xl bg-slate-800 border-2 border-slate-600 shadow-2xl overflow-hidden flex flex-col items-center justify-center p-2 text-center">
+                            
+                            <!-- Actual Profile Image -->
+                            <div class="w-full h-full rounded-2xl overflow-hidden shadow-inner relative group">
+                                <img src="276173519_5608379532511841_113893967286406488_n.jpg" alt="م. محمود حسن" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/ffffff?text=%D9%85.%20%D9%85%D8%AD%D9%85%D9%88%D写%20%D8%AD%D8%B3%D9%86';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+                                <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+                                    <h3 class="text-lg font-bold">م. محمود حسن</h3>
+                                    <p class="text-sky-300 text-xs">استشاري هندسة مدنية</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-4 -right-4 bg-white text-primary px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-100 z-10">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-accent flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-500 font-medium">الاعتماد المهني</span>
+                                <span class="text-sm font-bold text-primary">نقابة المهندسين المصرية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-bold text-sm tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-200">الخبرة والاحترافية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-primary mt-3">من أنا وخبرتي المهنية</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">
+                    مسيرة مهنية امتدت لعشر سنوات في إدارة المشاريع الهندسية الضخمة، مع سجل حافل بالإنجازات في التخطيط، التصميم، والإشراف التنفيذي.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Right Column: Bio & Highlights -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-2xl font-bold text-primary leading-snug">
+                        قيادة هندسية تلهم فرق العمل وتحقق أعلى معايير الجودة والكفاءة
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        أنا المهندس محمود حسن، حاصل على بكالوريوس الهندسة المدنية مع خبرة عملية تزيد عن 10 سنوات في السوق المحلي والإقليمي. تخصصت في إدارة المشاريع الإنشائية والبنية التحتية، مع قدرة فائقة على توجيه الفرق متعددة التخصصات نحو إنجاز المشاريع في المواعيد المحددة وضمن الميزانية المرصودة.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        أؤمن بأن الهندسة الحقيقية لا تقتصر على التصميم فحسب، بل تمتد لتشمل دراسة الجدوى، إدارة المخاطر بدقة، وتوظيف أحدث التقنيات الهندسية لضمان استدامة المشاريع وسلامتها.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-cardBg p-4 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-sky-100 text-accent flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary text-sm">السلامة أولاً</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">معايير أمان صارمة</p>
+                            </div>
+                        </div>
+                        <div class="bg-cardBg p-4 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-sky-100 text-accent flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary text-sm">الالتزام بالوقت</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">إدارة زمنية دقيقة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Column: Technical Skills & Progress Cards (as requested) -->
+                <div id="experience" class="lg:col-span-6 bg-cardBg p-6 sm:p-8 rounded-3xl shadow-xl border border-slate-200 space-y-6">
+                    <h3 class="text-xl font-bold text-primary flex items-center gap-3 pb-4 border-b border-slate-100">
+                        <i class="fa-solid fa-gears text-accent"></i>
+                        <span>المهارات والكفاءات الهندسية</span>
+                    </h3>
+
+                    <!-- Skill 1 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold text-slate-700">
+                            <span>إدارة المشاريع (Project Management)</span>
+                            <span class="text-accent">98%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-sky-400 to-accent h-full rounded-full" style="width: 98%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold text-slate-700">
+                            <span>التصميم الهندسي (Engineering Design)</span>
+                            <span class="text-accent">95%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-sky-400 to-accent h-full rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold text-slate-700">
+                            <span>الإشراف الميداني (Field Supervision)</span>
+                            <span class="text-accent">96%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-sky-400 to-accent h-full rounded-full" style="width: 96%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold text-slate-700">
+                            <span>حل المشكلات الهندسية (Problem Solving)</span>
+                            <span class="text-accent">94%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-sky-400 to-accent h-full rounded-full" style="width: 94%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 5 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold text-slate-700">
+                            <span>التخطيط الإستراتيجي (Strategic Planning)</span>
+                            <span class="text-accent">92%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-sky-400 to-accent h-full rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 6 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold text-slate-700">
+                            <span>السلامة المهنية (Occupational Safety)</span>
+                            <span class="text-accent">99%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-sky-400 to-accent h-full rounded-full" style="width: 99%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-bold text-sm tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-200">الإنجازات والمشاريع</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-primary mt-3">أبرز المشاريع الهندسية</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">
+                    نماذج من المشاريع الكبرى التي قمت بإدارتها وتصميمها والإشراف على تنفيذها خلال العقد الأخير.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-cardBg rounded-3xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-60 bg-gradient-to-br from-primary to-slate-800 overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center relative z-10 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center text-3xl mx-auto shadow-lg mb-3">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <span class="text-sky-300 font-bold text-lg">مشروع سكني فاخر</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-accent/90 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                            منجز بنجاح
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary group-hover:text-accent transition-colors">برج المروة السكني</h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                تصميم وإدارة تنفيذ برج سكني متكامل يتكون من 20 طابقاً مع مواقف سيارات تحت الأرض وأنظمة أمان متطورة وكفاءة في استهلاك الطاقة.
+                            </p>
+                        </div>
+                        <div class="space-y-4 pt-4 border-t border-slate-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">إدارة الإنشاءات</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">تصميم إنشائي</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">إشراف ميداني</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-cardBg rounded-3xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-60 bg-gradient-to-br from-primary to-slate-800 overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center relative z-10 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center text-3xl mx-auto shadow-lg mb-3">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+                            <span class="text-sky-300 font-bold text-lg">بنية تحتية ومياه</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-accent/90 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                            منجز بنجاح
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary group-hover:text-accent transition-colors">محطة تنقية المياه المركزية</h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                محطة معالجة وتنقيتها بطاقة استيعابية ضخمة، مع شبكات ضخ متقدمة وأنظمة تحكم أوتوماتيكية بالكامل لخدمة التجمعات العمرانية الكبرى.
+                            </p>
+                        </div>
+                        <div class="space-y-4 pt-4 border-t border-slate-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">هندسة بيئية</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">إدارة مشاريع كبرى</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">تحكم آلي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-cardBg rounded-3xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-60 bg-gradient-to-br from-primary to-slate-800 overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center relative z-10 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center text-3xl mx-auto shadow-lg mb-3">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+                            <span class="text-sky-300 font-bold text-lg">شبكات الطرق والمرور</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-accent/90 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                            منجز بنجاح
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary group-hover:text-accent transition-colors">شبكة الطرق الذكية</h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                تطوير وتخطيط شبكة طرق رئيسية بطول 45 كيلومتراً، مدعومة بأنظمة إضاءة ذكية ومستشعرات مرورية لتقليل الازدحام ورفع مستويات الأمان.
+                            </p>
+                        </div>
+                        <div class="space-y-4 pt-4 border-t border-slate-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">هندسة الطرق</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">التخطيط الحضري</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">إشراف ميداني</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-cardBg rounded-3xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-60 bg-gradient-to-br from-primary to-slate-800 overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center relative z-10 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center text-3xl mx-auto shadow-lg mb-3">
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                            <span class="text-sky-300 font-bold text-lg">مجمع تجاري وإداري</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-accent/90 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                            منجز بنجاح
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary group-hover:text-accent transition-colors">مجمع البنوك الإداري</h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                تصميم وتجهيز مجمع إداري متطور يضم مقرات رئيسية للبنوك، مزود بأحدث أنظمة التكييف المركزي، الطاقات المتجددة، والبنية التحتية لتقنية المعلومات.
+                            </p>
+                        </div>
+                        <div class="space-y-4 pt-4 border-t border-slate-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">إدارة مشاريع</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">تصميم معماري</span>
+                                <span class="bg-sky-50 text-accent text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100">استشارات هندسية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-bold text-sm tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-200">تواصل معي</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-primary mt-3">دعنا نناقش مشروعك القادم</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">
+                    هل تحتاج إلى استشارة هندسية احترافية أو إدارة لمشروعك الإنشائي؟ أنا في خدمتكم دائماً.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Right Column: Direct Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="bg-primary text-white p-8 rounded-3xl shadow-xl space-y-8 relative overflow-hidden">
+                        <div class="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-accent/20 blur-2xl pointer-events-none"></div>
+
+                        <div>
+                            <h3 class="text-2xl font-bold">معلومات الاتصال المباشر</h3>
+                            <p class="text-slate-300 text-sm mt-2">يسعدني تواصلكم عبر القنوات التالية أو من خلال نموذج الرسائل.</p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Phone -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-sky-300 font-medium">رقم الهاتف / واتساب</span>
+                                    <a href="tel:+201121540899" dir="ltr" class="text-white font-bold text-lg hover:text-sky-300 transition-colors inline-block mt-0.5">+20 112 154 0899</a>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-sky-300 font-medium">البريد الإلكتروني</span>
+                                    <a href="mailto:mahmoud.hassan@engineer.com" class="text-white font-bold text-base hover:text-sky-300 transition-colors inline-block mt-0.5">mahmoud.hassan@engineer.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-sky-300 font-medium">الموقع الحالي</span>
+                                    <span class="text-white font-bold text-lg block mt-0.5">جمهورية مصر العربية</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700/80 flex items-center gap-4">
+                            <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" aria-label="X Twitter" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Column: Contact Form with Success Feedback State -->
+                <div class="lg:col-span-7">
+                    <div class="bg-cardBg p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-200 relative">
+                        
+                        <!-- Success Feedback Message Overlay (Hidden by default) -->
+                        <div id="success-msg" class="hidden absolute inset-0 bg-white/95 backdrop-blur-sm z-20 rounded-3xl flex flex-col items-center justify-center text-center p-8 transition-all">
+                            <div class="w-20 h-20 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-4xl mb-4 shadow-inner">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-primary">تم إرسال رسالتك بنجاح!</h3>
+                            <p class="text-slate-600 mt-2 max-w-md">
+                                شكراً لتواصلك يا مهندس/عميل العزيز. لقد تلقيت رسالتك وسأقوم بالرد عليك في أقرب وقت ممكن خلال 24 ساعة.
+                            </p>
+                            <button id="reset-form-btn" class="mt-6 bg-accent hover:bg-accentHover text-white px-6 py-3 rounded-xl font-semibold shadow transition-colors">
+                                إرسال رسالة أخرى
+                            </button>
+                        </div>
+
+                        <form id="contact-form" class="space-y-6">
+                            <p class="text-slate-500 text-sm mb-6">املأ الحقول التالية وسأقوم بالتواصل معك في أقرب وقت.</p>
+
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">الاسم الكريم</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" id="name" required placeholder="أدخل اسمك الكامل" class="w-full pr-11 pl-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-accent focus:bg-white text-slate-800 text-sm transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">البريد الإلكتروني</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="email" id="email" required placeholder="name@example.com" class="w-full pr-11 pl-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-accent focus:bg-white text-slate-800 text-sm transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">نص الرسالة أو الاستشارة</label>
+                                <div class="relative">
+                                    <span class="absolute top-4 right-4 text-slate-400">
+                                        <i class="fa-solid fa-message"></i>
+                                    </span>
+                                    <textarea id="message" rows="5" required placeholder="اكتب تفاصيل مشروعك أو استشارتك الهندسية..." class="w-full pr-11 pl-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-accent focus:bg-white text-slate-800 text-sm transition-colors"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-accent/40 transition-all duration-300 flex items-center justify-center gap-3 text-base">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>إرسال الرسالة الآن</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Brand / Copyright -->
+                <div class="text-center md:text-right">
+                    <a href="#home" class="text-xl font-bold tracking-tight inline-block text-white mb-1">م. محمود حسن</a>
+                    <p class="text-xs text-slate-400">
+                        جميع الحقوق محفوظة © 2026 | خبرة 10 سنوات من الإتقان والتميز الهندسي.
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-4">
+                    <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors shadow">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="X Twitter" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors shadow">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors shadow">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" aria-label="Email" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-accent text-white flex items-center justify-center transition-colors shadow">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle Functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Contact Form Submission Feedback State Logic
+        const contactForm = document.getElementById('contact-form');
+        const successMsg = document.getElementById('success-msg');
+        const resetFormBtn = document.getElementById('reset-form-btn');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Show success feedback state smoothly
+            successMsg.classList.remove('hidden');
+        });
+
+        resetFormBtn.addEventListener('click', () => {
+            contactForm.reset();
+            successMsg.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
